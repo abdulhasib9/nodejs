@@ -7,3 +7,14 @@ console.log(first,second)
  writeFileSync("./content/newFile.txt",
  `this is the new file ${first}, ${second} `,{flag:'a'})
 
+
+
+ //reading async 
+ console.log("read file ")
+ readFile("./content/first.txt","utf-8",(err,result)=>{
+    if(err){
+        console.log("something scary happened")
+    }else {
+        console.log(result)
+    }
+ })
